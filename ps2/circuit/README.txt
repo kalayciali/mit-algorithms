@@ -1,5 +1,7 @@
 Circuit Simulation code for MIT 6.006 Fall 2011 PS2
 
+Implementation of BST within circuit.py
+
 The code distribution contains the following files:
   * circuit.py - implementation of the circuit simulator
   * circuit_test.py - unit test for circuit.py
