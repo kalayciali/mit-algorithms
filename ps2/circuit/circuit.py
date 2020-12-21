@@ -424,27 +424,6 @@ class PriorityQueue:
     def min(self):
         return self.min_node().key
 
-    def pop_node(self):
-        """Removes the minimum element in the queue.
-    
-        Returns:
-            The value of the removed element.
-        """
-        node = self.min_node()
-        # node is min
-        if node is not None:
-            if node.parent is not None:
-                # even if node.right is None it will work
-                node.parent.left = node.right
-            else:
-                # root is smallest one
-                self.root = node.right
-            if node.right is not None:
-                # if not None assign parent
-                node.right.parent = node.parent
-        node.disconnect()
-        BSTnode.decr_len()
-        return node
 
     def pop(self):
         return self.pop_node().key
